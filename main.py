@@ -16,7 +16,7 @@ load_dotenv(os.path.join('~/PycharmProjects/blog-with-users/', '.env'))
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
